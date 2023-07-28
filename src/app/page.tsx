@@ -1,0 +1,14 @@
+import Sidebar from '@components/desktop-exclusive/Sidebar/MainSidebar';
+
+const Page = () => {
+  return (
+    <div>
+      <div className='lg:grid grid-cols-6'>
+        <div className='col-start-3 col-span-2'>main page content</div>
+        <Sidebar className='col-start-5 col-span-2' />
+      </div>
+    </div>
+  );
+};
+
+export default Page;
