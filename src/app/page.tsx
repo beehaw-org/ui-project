@@ -3,14 +3,14 @@ import PostCard from '@components/common/PostCard';
 
 const Page = () => {
   return (
-    <div className='lg:grid grid-cols-6'>
-      <div className='col-start-3 col-span-2'>
+    <div className='lg:flex max-w-screen-lg mx-auto space-x-4'>
+      <div className='w-2/3 space-y-2'>
         {
           [...Array(10)].map(i => <PostCard key={i} />)
           // posts.map((post: PostView) => <PostCard key={post.post.id} postObj={post} />)
         }
       </div>
-      <Sidebar className='col-start-5 col-span-2' />
+      <Sidebar className='w-1/3' />
     </div>
   );
 };
