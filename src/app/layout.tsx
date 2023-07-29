@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 
+import Navbar from '@components/common/navbar';
+
 // These styles apply to every route in the application
 import './globals.css';
 
@@ -16,7 +18,8 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className='dark'>
-        <main className='w-full min-h-[100vh] px-4 pb-4 bg-secondary-dark text-[#e4e4e4]'>
+        <Navbar />
+        <main className='w-full min-h-[100vh] p-4 bg-secondary-dark text-[#e4e4e4]'>
           {children}
         </main>
       </body>
