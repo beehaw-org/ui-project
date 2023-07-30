@@ -38,7 +38,6 @@ const PostCard = () => {
           </button>
         </div>
         <div className="ml-auto flex gap-x-3 pl-3">
-          <button className="h-10 rounded-md bg-zinc-800 px-3 font-bold">Crosspost</button>
           <button className="h-10 rounded-md bg-zinc-800 px-3 font-bold">Save</button>
           <button className="h-10 rounded-md bg-zinc-800 px-3 font-bold">More</button>
         </div>
