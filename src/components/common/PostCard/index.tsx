@@ -19,7 +19,6 @@ const PostCard = () => {
       </section>
       <header>
         <h1 className="mt-3 text-2xl font-bold">Post title is very long and big and tries to be a bit too overly descriptive but I'll allow it</h1>
-        <p className="mt-5 hidden rounded-xl bg-zinc-800 px-5 py-5 md:flex">We're a collective of individuals upset with the way social media has been traditionally governed. A severe lack of moderation has led to major platforms like Facebook to turn into political machinery focused on disinformation campaigns as a way to make profit off of users. Websites with ineffective moderation allow hate speech to proliferate and contribute to the erosion....</p>
       </header>
       <footer className="mt-5 flex flex-row">
         <div className="flex gap-x-3">
