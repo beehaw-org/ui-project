@@ -11,7 +11,7 @@ const UserIcon = ({ layout }: Props) => {
         <div className='flex gap-4'>
           <Image src='' alt='user icon' />
           <div>
-            <p className='font-bold font-serif'>Lionir</p>
+            <p className='font-bold'>Lionir</p>
             <p>lionir@beehaw.org</p>
           </div>
         </div>
