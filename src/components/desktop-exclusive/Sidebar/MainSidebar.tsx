@@ -11,7 +11,7 @@ type Props = {
 const Sidebar = ({ className }: Props) => {
   return (
     <aside className={classNames('font-serif font-bold', className)}>
-      <article className='bg-primary-dark rounded-lg p-4 mb-4 w-full'>
+      <article className='bg-zinc-900 rounded-lg p-4 mb-4 w-full'>
         <header>
           <h1 className='text-48 flex items-center gap-8 mb-8'>
             <Image src={logo} alt='cowbee logo' />
@@ -79,7 +79,7 @@ const Sidebar = ({ className }: Props) => {
         </article>
       </article>
 
-      <article className='bg-primary-dark rounded-lg p-4 w-full'>
+      <article className='bg-zinc-900 rounded-lg p-4 w-full'>
         <h1 className='text-40'>Admins</h1>
         <ul>
           <li>
