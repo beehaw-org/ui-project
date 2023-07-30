@@ -1,3 +1,5 @@
+import { ArrowUpIcon, ArrowsPointingOutIcon, ArrowsPointingInIcon, BookmarkIcon, EllipsisHorizontalIcon } from '@heroicons/react/24/solid';
+import { BookmarkIcon as OutlineBookmarkIcon } from '@heroicons/react/24/outline'
 const PostCard = () => {
 
   return (
@@ -22,23 +24,25 @@ const PostCard = () => {
       </header>
       <footer className="mt-5 flex flex-row">
         <div className="flex gap-x-3">
-          <button className="flex h-10 items-center rounded-md bg-zinc-800 px-3 font-bold">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="h-4 w-4">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
-            </svg>
-            <p className="ml-2">420</p>
-          </button>
-          <button className="h-10 whitespace-nowrap rounded-md bg-zinc-800 px-3 font-bold">42 comments</button>
+          <div className="inline-flex rounded-md shadow-sm">
+            <button className="px-2 py-2 rounded-l-lg bg-zinc-700 dark:hover:bg-zinc-600">
+              <ArrowUpIcon className="h-4 w-4" />
+            </button>
+            <span className="px-2 py-2 rounded-r-lg bg-zinc-700 ">420</span>
+          </div>
+          <button className="whitespace-nowrap rounded-md bg-zinc-700 px-3 dark:hover:bg-zinc-600">42 comments</button>
 
-          <button className="hidden h-10 rounded-md bg-zinc-800 px-3 font-bold md:block">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="h-6 w-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" />
-            </svg>
+          <button className="px-3 rounded-md bg-zinc-700 dark:hover:bg-zinc-600">
+            <ArrowsPointingOutIcon className="h-4 w-4" />
           </button>
         </div>
         <div className="ml-auto flex gap-x-3 pl-3">
-          <button className="h-10 rounded-md bg-zinc-800 px-3 font-bold">Save</button>
-          <button className="h-10 rounded-md bg-zinc-800 px-3 font-bold">More</button>
+          <button className="px-3 rounded-md bg-zinc-700 dark:hover:bg-zinc-600">
+            <OutlineBookmarkIcon className="h-4 w-4" />
+          </button>
+          <button className="px-3 rounded-md bg-zinc-700 dark:hover:bg-zinc-600">
+            <EllipsisHorizontalIcon className="h-4 w-4" />
+          </button>
         </div>
       </footer>
     </article>
