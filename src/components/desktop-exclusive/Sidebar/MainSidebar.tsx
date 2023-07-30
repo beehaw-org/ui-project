@@ -10,7 +10,7 @@ type Props = {
 
 const Sidebar = ({ className }: Props) => {
   return (
-    <aside className={classNames('font-serif font-bold', className)}>
+    <aside className={classNames(className)}>
       <article className='bg-zinc-900 rounded-lg p-4 mb-4 w-full'>
         <header>
           <h1 className='text-48 flex items-center gap-8 mb-8'>
