@@ -20,7 +20,7 @@ const PostCard = () => {
         </aside>
       </section>
       <header>
-        <h1 className="mt-3 text-2xl font-bold">Post title is very long and big and tries to be a bit too overly descriptive but I'll allow it</h1>
+        <h1 className="mt-3 text-2xl font-bold">{"Post title is very long and big and tries to be a bit too overly descriptive but I'll allow it"}</h1>
       </header>
       <footer className="mt-5 flex flex-row">
         <div className="flex gap-x-3">
