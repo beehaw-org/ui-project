@@ -10,6 +10,12 @@ Alternative frontend for Lemmy
 
 ## Running locally
 
+### Requirements
+
+You must have nodejs available locally to run the dev server. You can either use [nvm](https://github.com/nvm-sh/nvm),
+which automates downloading and installing the correct version of nodejs, or you can manually see what version you need
+from the [.nvmrc](.nvmrc) file and install it yourself.
+
 ```bash
 # install dependencies
 npm i
