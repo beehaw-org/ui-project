@@ -51,7 +51,7 @@ const Sidebar = async ({ className }: Props) => {
           </ul>
         </header>
 
-        <article className='prose-sm dark:prose-invert'>
+        <article className='prose-sm dark:prose-invert prose-zinc hover:prose-a:text-blue-400 prose-a:text-blue-500 prose-hr:border-zinc-500 prose-ul:list-disc'>
           <div dangerouslySetInnerHTML={{ __html: sidebarHtml }} />
         </article>
       </article>
