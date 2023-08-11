@@ -23,4 +23,6 @@ jobs:
       - name: Lint
         run: npm run lint
       - name: Build
-        run: npm run build
+        run: |
+          cp .env.local.sample .env.local
+          npm run build
