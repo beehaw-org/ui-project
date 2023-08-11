@@ -33,7 +33,7 @@ const Sidebar = async ({ className }: Props) => {
       )}
     >
       <article className='bg-zinc-900 rounded-lg p-4 mb-4 w-full'>
-        <header className='flex flex-col items-center'>
+        <header className='flex flex-col items-center mb-6'>
           {siteView.site.banner && (
             <section className='relative w-[230px] h-[90px]'>
               <Image
@@ -48,8 +48,7 @@ const Sidebar = async ({ className }: Props) => {
           <h1 className='text-48 flex items-center gap-8 mb-2'>
             {siteView.site.name}
           </h1>
-
-          <ul className='flex gap-6 mb-6 text-24'>
+          <ul className='flex gap-6 text-24'>
             <li className='flex flex-col items-center'>
               <p>{compactNumberFormatter.format(siteView.counts.users)}</p>
               <p className='text-sm'>members</p>
@@ -71,8 +70,8 @@ const Sidebar = async ({ className }: Props) => {
       </article>
 
       <article className='bg-zinc-900 rounded-lg p-4 w-full'>
-        <h1 className='text-40'>Admins</h1>
-        <ul>
+        <h1 className='text-32 mb-4'>Admins</h1>
+        <ul className='flex flex-col gap-2'>
           {admins.map((admin) => (
             <li key={admin.person.id}>
               <UserIcon layout={'min'} person={admin.person} />
