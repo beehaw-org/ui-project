@@ -1,14 +1,19 @@
 import type { Metadata } from 'next';
+import { apiClient } from '@app/apiClient';
 
 import Navbar from '@components/common/navbar';
 
 // These styles apply to every route in the application
 import './globals.css';
 
-export const metadata: Metadata = {
-  title: 'BEEHAW',
-  description: 'a mock',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const site = await apiClient.getSite();
+
+  return {
+    title: site.site_view.site.name,
+    description: site.site_view.site.description,
+  };
+}
 
 export default function RootLayout({
   children,
