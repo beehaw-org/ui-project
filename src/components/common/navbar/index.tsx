@@ -1,6 +1,7 @@
 import { apiClient } from '@app/apiClient';
 import Image from 'next/image';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import SidebarToggle from './SidebarToggle';
 
 const Navbar = async () => {
   const { site_view: siteView } = await apiClient.getSite();
@@ -36,7 +37,8 @@ const Navbar = async () => {
           </button>
         </section>
         <section className='place-self-end'>
-          // User and notification icons, sidebar toggle button
+          {/* User and notification icons */}
+          <SidebarToggle />
         </section>
       </div>
     </nav>

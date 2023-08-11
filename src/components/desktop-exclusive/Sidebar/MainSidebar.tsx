@@ -17,7 +17,21 @@ const Sidebar = async ({ className }: Props) => {
 
   const sidebarHtml = md.render(siteView.site.sidebar ?? '');
   return (
-    <aside className={classNames(className)}>
+    <aside
+      id='sidebar'
+      className={classNames(
+        className,
+        'w-0',
+        'absolute',
+        'top-0',
+        'right-0',
+        'overflow-x-hidden',
+        'duration-150',
+        'ease-in-out',
+        'lg:block',
+        'lg:static',
+      )}
+    >
       <article className='bg-zinc-900 rounded-lg p-4 mb-4 w-full'>
         <header className='flex flex-col items-center'>
           {siteView.site.banner && (
