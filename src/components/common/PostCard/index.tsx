@@ -7,6 +7,7 @@ import { BookmarkIcon as OutlineBookmarkIcon } from '@heroicons/react/24/outline
 import { PostView } from 'lemmy-js-client';
 import { formatDistanceToNow } from 'date-fns';
 import { getHostFromActorId } from '@utils/getHostFromActorId';
+import { compactNumberFormatter } from '@utils/compactNumberFormatter';
 
 type Props = {
   postView: PostView;
@@ -52,11 +53,12 @@ export const PostCard = (props: Props) => {
               <ArrowUpIcon className='h-4 w-4' />
             </button>
             <span className='px-2 py-2 rounded-r-lg bg-zinc-700 '>
-              {props.postView.counts.score}
+              {compactNumberFormatter.format(props.postView.counts.score)}
             </span>
           </div>
           <button className='whitespace-nowrap rounded-md bg-zinc-700 px-3 dark:hover:bg-zinc-600'>
-            {props.postView.counts.comments} comments
+            {compactNumberFormatter.format(props.postView.counts.comments)}{' '}
+            comments
           </button>
 
           <button className='px-3 rounded-md bg-zinc-700 dark:hover:bg-zinc-600'>

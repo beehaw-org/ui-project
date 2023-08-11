@@ -4,6 +4,7 @@ import Image from 'next/image';
 import MarkdownIt from 'markdown-it';
 
 import { apiClient } from '@app/apiClient';
+import { compactNumberFormatter } from '@utils/compactNumberFormatter';
 
 type Props = {
   className?: string;
@@ -12,8 +13,6 @@ type Props = {
 const md = new MarkdownIt();
 
 const Sidebar = async ({ className }: Props) => {
-  const formatter = Intl.NumberFormat('en', { notation: 'compact' });
-
   const { site_view: siteView, admins } = await apiClient.getSite();
 
   const sidebarHtml = md.render(siteView.site.sidebar ?? '');
@@ -34,9 +33,15 @@ const Sidebar = async ({ className }: Props) => {
           </h1>
 
           <ul className='flex gap-6 mb-6 text-24'>
-            <li>{formatter.format(siteView.counts.users)} members</li>
-            <li>{formatter.format(siteView.counts.posts)} posts</li>
-            <li>{formatter.format(siteView.counts.comments)} Comments</li>
+            <li>
+              {compactNumberFormatter.format(siteView.counts.users)} members
+            </li>
+            <li>
+              {compactNumberFormatter.format(siteView.counts.posts)} posts
+            </li>
+            <li>
+              {compactNumberFormatter.format(siteView.counts.comments)} Comments
+            </li>
           </ul>
         </header>
 
