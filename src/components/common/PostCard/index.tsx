@@ -5,7 +5,7 @@ import {
 } from '@heroicons/react/24/solid';
 import { BookmarkIcon as OutlineBookmarkIcon } from '@heroicons/react/24/outline';
 import { PostView } from 'lemmy-js-client';
-import { formatDistanceToNow } from 'date-fns';
+import { formatDistanceToNowStrict } from 'date-fns';
 import { getHostFromActorId } from '@utils/getHostFromActorId';
 import { compactNumberFormatter } from '@utils/compactNumberFormatter';
 
@@ -36,7 +36,7 @@ export const PostCard = (props: Props) => {
             </p>
             <p>&#8226;</p>
             <p>
-              {formatDistanceToNow(new Date(props.postView.post.published), {
+              {formatDistanceToNowStrict(new Date(props.postView.post.published), {
                 addSuffix: true,
               })}
             </p>
