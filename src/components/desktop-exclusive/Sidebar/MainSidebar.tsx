@@ -20,8 +20,8 @@ const Sidebar = async ({ className }: Props) => {
     <aside className={classNames(className)}>
       <article className='bg-zinc-900 rounded-lg p-4 mb-4 w-full'>
         <header className='flex flex-col items-center'>
-          <div className='relative w-[230px] h-[90px]'>
-            {siteView.site.banner && (
+          {siteView.site.banner && (
+            <section className='relative w-[230px] h-[90px]'>
               <Image
                 className='mt-4'
                 src={siteView.site.banner}
@@ -29,8 +29,8 @@ const Sidebar = async ({ className }: Props) => {
                 height={90}
                 alt='Instance banner'
               />
-            )}
-          </div>
+            </section>
+          )}
           <h1 className='text-48 flex items-center gap-8 mb-2'>
             {siteView.site.name}
           </h1>
