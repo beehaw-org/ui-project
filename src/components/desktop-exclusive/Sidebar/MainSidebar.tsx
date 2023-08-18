@@ -19,33 +19,39 @@ const Sidebar = async ({ className }: Props) => {
   return (
     <aside className={classNames(className)}>
       <article className='bg-zinc-900 rounded-lg p-4 mb-4 w-full'>
-        <header>
-          <h1 className='text-48 flex items-center gap-8 mb-8'>
-            {siteView.site.icon && (
+        <header className='flex flex-col items-center'>
+          {siteView.site.banner && (
+            <section className='relative w-[230px] h-[90px]'>
               <Image
-                src={siteView.site.icon}
-                width={100}
-                height={100}
-                alt='Instance logo'
+                className='mt-4'
+                src={siteView.site.banner}
+                width={230}
+                height={90}
+                alt='Instance banner'
               />
-            )}
+            </section>
+          )}
+          <h1 className='text-48 flex items-center gap-8 mb-2'>
             {siteView.site.name}
           </h1>
 
           <ul className='flex gap-6 mb-6 text-24'>
-            <li>
-              {compactNumberFormatter.format(siteView.counts.users)} members
+            <li className='flex flex-col items-center'>
+              <p>{compactNumberFormatter.format(siteView.counts.users)}</p>
+              <p className='text-sm'>members</p>
             </li>
-            <li>
-              {compactNumberFormatter.format(siteView.counts.posts)} posts
+            <li className='flex flex-col items-center'>
+              <p>{compactNumberFormatter.format(siteView.counts.posts)}</p>
+              <p className='text-sm'>posts</p>
             </li>
-            <li>
-              {compactNumberFormatter.format(siteView.counts.comments)} Comments
+            <li className='flex flex-col items-center'>
+              <p>{compactNumberFormatter.format(siteView.counts.comments)}</p>
+              <p className='text-sm'>comments</p>
             </li>
           </ul>
         </header>
 
-        <article className='prose-sm dark:prose-invert'>
+        <article className='prose-sm dark:prose-invert prose-zinc hover:prose-a:text-blue-400 prose-a:text-blue-500 prose-hr:border-zinc-500 prose-ul:list-disc'>
           <div dangerouslySetInnerHTML={{ __html: sidebarHtml }} />
         </article>
       </article>
