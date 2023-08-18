@@ -1,9 +1,8 @@
 import Sidebar from '@components/desktop-exclusive/Sidebar/MainSidebar';
 import { PostCard } from '@components/common/PostCard';
-import { PostView } from 'lemmy-js-client';
 import { apiClient } from '@app/apiClient';
 
-const Page = async ({ params }: { params: { id: Number } }) => {
+const PostPage = async ({ params }: { params: { id: Number } }) => {
   const { post_view } = await apiClient.getPost({
     id: Number(params.id),
   });
@@ -18,4 +17,4 @@ const Page = async ({ params }: { params: { id: Number } }) => {
     );
 };
 
-export default Page;
+export default PostPage;
