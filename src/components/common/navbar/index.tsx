@@ -1,7 +1,7 @@
 import { apiClient } from '@app/apiClient';
-import Image from 'next/image';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import SidebarToggle from './SidebarToggle';
+import Avatar from '../avatar';
 
 const Navbar = async () => {
   const { site_view: siteView } = await apiClient.getSite();
@@ -11,16 +11,7 @@ const Navbar = async () => {
       <div className='max-w-screen-xl mx-auto grid grid-cols-3'>
         <section>
           <a href='/' className='flex items-center w-fit'>
-            {siteView.site.icon && (
-              <span className='inline-block h-10 w-10 overflow-hidden rounded-full mr-2'>
-                <Image
-                  src={siteView.site.icon}
-                  alt={`${siteView.site.name} logo`}
-                  width={100}
-                  height={100}
-                />
-              </span>
-            )}
+            { siteView.site.icon && <Avatar src={siteView.site.icon} alt={`${siteView.site.name} logo`} dimension={10} /> }
             <h1 className='hidden md:block ml-2 text-3xl'>
               {siteView.site.name}
             </h1>

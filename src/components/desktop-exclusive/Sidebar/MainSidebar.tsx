@@ -1,10 +1,11 @@
-import UserIcon from '@components/common/UserIcon';
 import classNames from 'classnames';
 import Image from 'next/image';
+import { Person } from 'lemmy-js-client';
 import MarkdownIt from 'markdown-it';
-
+import Avatar from '@components/common/avatar';
 import { apiClient } from '@app/apiClient';
 import { compactNumberFormatter } from '@utils/compactNumberFormatter';
+import { getHostFromActorId } from '@utils/getHostFromActorId';
 
 type Props = {
   className?: string;
@@ -72,9 +73,18 @@ const Sidebar = async ({ className }: Props) => {
       <article className='bg-zinc-900 rounded-lg p-6 lg:p-4 w-full border-l-2 border-zinc-700 lg:border-none'>
         <h1 className='text-32 mb-4'>Admins</h1>
         <ul className='flex flex-col gap-2'>
-          {admins.map((admin) => (
-            <li key={admin.person.id}>
-              <UserIcon layout={'min'} person={admin.person} />
+          {admins.map(({ person }: { person: Person }) => (
+            <li key={person.id}>
+              <a href='' className='flex gap-4'>
+                <Avatar src={person?.avatar} alt={`${person?.display_name || person.name} avatar`} />
+                <section>
+                  <p className='font-bold'>{person.display_name ?? person.name}</p>
+                  <p>
+                    {person.name}@{getHostFromActorId(person.actor_id)}
+                  </p>
+                </section>
+              </a>
+
             </li>
           ))}
         </ul>
