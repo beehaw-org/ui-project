@@ -32,7 +32,7 @@ const Sidebar = async ({ className }: Props) => {
         'lg:static',
       )}
     >
-      <article className='bg-zinc-900 rounded-lg p-4 mb-4 w-full'>
+      <article className='bg-zinc-900 rounded-lg p-6 lg:p-4 mb-4 w-full border-l-2 border-zinc-700 lg:border-none'>
         <header className='flex flex-col items-center mb-6'>
           {siteView.site.banner && (
             <section className='relative w-[230px] h-[90px]'>
@@ -69,7 +69,7 @@ const Sidebar = async ({ className }: Props) => {
         </article>
       </article>
 
-      <article className='bg-zinc-900 rounded-lg p-4 w-full'>
+      <article className='bg-zinc-900 rounded-lg p-6 lg:p-4 w-full border-l-2 border-zinc-700 lg:border-none'>
         <h1 className='text-32 mb-4'>Admins</h1>
         <ul className='flex flex-col gap-2'>
           {admins.map((admin) => (
