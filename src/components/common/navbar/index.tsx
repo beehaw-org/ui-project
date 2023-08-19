@@ -1,4 +1,5 @@
 import { apiClient } from '@app/apiClient';
+import Link from 'next/link';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import SidebarToggle from './SidebarToggle';
 import Avatar from '../avatar';
@@ -8,7 +9,7 @@ const Navbar = async () => {
 
   return (
     <nav className='bg-secondary-dark text-[#e4e4e4] px-4 py-2 border-b border-primary-dark'>
-      <div className='max-w-screen-xl mx-auto grid grid-cols-3'>
+      <div className='max-w-screen-xl mx-auto grid grid-cols-2 md:grid-cols-3'>
         <section>
           <a href='/' className='flex items-center w-fit'>
             { siteView.site.icon && <Avatar src={siteView.site.icon} alt={`${siteView.site.name} logo`} dimension={10} /> }
@@ -17,7 +18,7 @@ const Navbar = async () => {
             </h1>
           </a>
         </section>
-        <section className='place-self-center w-full flex items-center bg-zinc-700 rounded-lg'>
+        <section className='hidden place-self-center w-full md:flex items-center bg-zinc-700 rounded-lg'>
           <input
             type='text'
             placeholder='Search'
@@ -27,8 +28,11 @@ const Navbar = async () => {
             <MagnifyingGlassIcon className='w-6 h-6' />
           </button>
         </section>
-        <section className='place-self-end'>
+        <section className='place-self-end flex gap-2'>
           {/* User and notification icons */}
+          <Link href='' className='bg-zinc-700 dark:hover:bg-zinc-600 flex items-center md:hidden rounded-lg px-2'>
+            <MagnifyingGlassIcon className='w-6 h-6' />
+          </Link>
           <SidebarToggle />
         </section>
       </div>
