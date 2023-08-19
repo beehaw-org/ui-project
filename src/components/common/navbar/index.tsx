@@ -2,6 +2,7 @@ import { apiClient } from '@app/apiClient';
 import Link from 'next/link';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import SidebarToggle from './SidebarToggle';
+import UserDropdown from './UserDropdown';
 import Avatar from '../avatar';
 
 const Navbar = async () => {
@@ -33,6 +34,7 @@ const Navbar = async () => {
           <Link href='' className='bg-zinc-700 dark:hover:bg-zinc-600 flex items-center md:hidden rounded-lg px-2'>
             <MagnifyingGlassIcon className='w-6 h-6' />
           </Link>
+          <UserDropdown />
           <SidebarToggle />
         </section>
       </div>
