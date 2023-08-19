@@ -27,7 +27,7 @@ const Sidebar = async ({ className }: Props) => {
                 src={siteView.site.banner}
                 width={230}
                 height={90}
-                alt='Instance banner'
+                alt={`${siteView.site.name} banner`}
               />
             </section>
           )}

@@ -11,7 +11,7 @@ const Navbar = async () => {
           <span className='inline-block h-10 w-10 overflow-hidden rounded-full mr-2'>
             <Image
               src={siteView.site.icon}
-              alt='Instance logo'
+              alt={`${siteView.site.name} logo`}
               width={100}
               height={100}
             />
