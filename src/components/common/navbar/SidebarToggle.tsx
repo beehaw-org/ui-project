@@ -17,8 +17,8 @@ const SidebarToggle = () => {
         mainSection.classList.toggle('dim', expanded);
       }
     }
-  })
-    
+  }, [expanded])
+
   return (
     <button
       onClick={() => setExpanded(!expanded)}
