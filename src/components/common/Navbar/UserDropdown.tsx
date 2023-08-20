@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import Link from 'next/link';
 import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
-import Avatar from '@components/common/avatar';
+import Avatar from '@components/common/Avatar';
 
 
 

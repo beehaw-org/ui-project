@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import SidebarToggle from './SidebarToggle';
 import UserDropdown from './UserDropdown';
-import Avatar from '../avatar';
+import Avatar from '../Avatar';
 
 const Navbar = async () => {
   const { site_view: siteView } = await apiClient.getSite();

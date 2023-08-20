@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import Image from 'next/image';
 import { Person } from 'lemmy-js-client';
 import MarkdownIt from 'markdown-it';
-import Avatar from '@components/common/avatar';
+import Avatar from '@components/common/Avatar';
 import { apiClient } from '@app/apiClient';
 import { compactNumberFormatter } from '@utils/compactNumberFormatter';
 import { getHostFromActorId } from '@utils/getHostFromActorId';
