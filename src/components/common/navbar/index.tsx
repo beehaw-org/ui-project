@@ -14,7 +14,7 @@ const Navbar = async () => {
         <section>
           <a href='/' className='flex items-center w-fit'>
             { siteView.site.icon && <Avatar src={siteView.site.icon} alt={`${siteView.site.name} logo`} dimension={10} /> }
-            <h1 className='hidden md:block ml-2 text-3xl'>
+            <h1 className='ml-2 text-3xl'>
               {siteView.site.name}
             </h1>
           </a>
