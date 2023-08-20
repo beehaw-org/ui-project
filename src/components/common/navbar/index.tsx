@@ -9,7 +9,7 @@ const Navbar = async () => {
   const { site_view: siteView } = await apiClient.getSite();
 
   return (
-    <nav className='bg-secondary-dark text-[#e4e4e4] px-4 py-2 border-b border-primary-dark'>
+    <nav className='bg-zinc-900 text-[#e4e4e4] px-4 py-2 border-b border-primary-dark'>
       <div className='max-w-screen-xl mx-auto grid grid-cols-2 md:grid-cols-3'>
         <section>
           <a href='/' className='flex items-center w-fit'>
