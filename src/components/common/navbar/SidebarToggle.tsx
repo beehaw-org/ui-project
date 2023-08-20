@@ -10,7 +10,8 @@ const SidebarToggle = () => {
     const sidebar = document.querySelector('aside#sidebar');
     if (sidebar) {
       sidebar.classList.toggle('w-0', !expanded);
-      sidebar.classList.toggle('w-4/5', expanded);
+      sidebar.classList.toggle('md:w-4/5', expanded);
+      sidebar.classList.toggle('w-full', expanded);
 
       const mainSection = document.querySelector('main article:first-of-type');
       if (mainSection) {
