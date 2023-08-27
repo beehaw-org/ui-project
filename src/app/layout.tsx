@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { apiClient } from '@app/apiClient';
 
-import Navbar from '@components/common/navbar';
+import Navbar from '@components/common/Navbar';
 
 // These styles apply to every route in the application
 import './globals.css';
